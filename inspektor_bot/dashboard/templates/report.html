@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ r.org_name }} — Inspektor robot{% endblock %}
+{% block content %}
+<p><a href="/">← Hisobotlar</a></p>
+<h2>{{ r.org_name }}</h2>
+<p class="muted">STIR {{ r.inn }} · OPF {{ r.opf }} · SOATO {{ r.soato }} · Yuborilgan {{ r.submitted_at }} · Shakl {{ r.form_type }}</p>
+<p>
+  {% if r.decision %}<span class="badge {{ r.decision }}">{{ DECISION_LABELS.get(r.decision, r.decision) }}</span>{% endif %}
+  &nbsp;Amal: <b>{{ ACTION_LABELS.get(r.action, r.action or '—') }}</b>
+  {% if r.error %}<div class="ERROR">{{ r.error }}</div>{% endif %}
+</p>
+
+<div class="grid2">
+<section>
+  <h3>Topilmalar</h3>
+  <table>
+    <tr><th>Daraja</th><th>Savol</th><th>Izoh</th></tr>
+    {% for f in r.findings %}
+    <tr>
+      <td class="{{ f.severity }}">{{ f.severity }}{% if f.internal %}<div class="muted">ichki</div>{% endif %}</td>
+      <td>{{ f.code or '—' }}</td>
+      <td>{{ f.text }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="3" class="muted">Nomuvofiqlik topilmadi</td></tr>
+    {% endfor %}
+  </table>
+
+  <h3>O'qilgan ma'lumotlar</h3>
+  <table>
+    <tr><th>Kod</th><th>Savol</th><th>Javob</th></tr>
+    {% for code, it in r.data.get('items', {}).items() %}
+    <tr>
+      <td>{{ it.code }}</td>
+      <td>{{ it.question }}</td>
+      <td>
+        {% for v in it['values'] %}<div>{% if v.label %}{{ v.label }}: {% endif %}<b>{{ v.amount }}</b> {{ v.unit or '' }}</div>{% endfor %}
+        {% for t in it.texts %}<div class="muted">{{ t }}</div>{% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+<section>
+  <h3>Yozilgan izoh</h3>
+  <pre>{{ r.comment or '—' }}</pre>
+  {% if r.site_check_text %}
+  <h3>Sayt «Tekshirish» natijasi</h3>
+  <pre>{{ r.site_check_text }}</pre>
+  {% endif %}
+  <details>
+    <summary>Xom matn (oynadan)</summary>
+    <pre>{{ r.raw_text }}</pre>
+  </details>
+</section>
+</div>
+{% endblock %}

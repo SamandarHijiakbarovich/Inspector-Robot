@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<meta http-equiv="refresh" content="30">
+<div class="cards">
+  <div class="card"><div class="l">Jami ko'rilgan</div><div class="n">{{ stats.total }}</div></div>
+  <div class="card"><div class="l">Bugun</div><div class="n">{{ stats.today }}</div></div>
+  <div class="card"><div class="l">Xato topilmadi</div><div class="n" style="color:var(--green)">{{ stats.by_decision.get('ACCEPT', 0) }}</div></div>
+  <div class="card"><div class="l">Xato topildi</div><div class="n" style="color:var(--red)">{{ stats.by_decision.get('REJECT', 0) }}</div></div>
+  <div class="card"><div class="l">Inspektor ko'rishi kerak</div><div class="n" style="color:var(--amber)">{{ stats.by_decision.get('MANUAL', 0) }}</div></div>
+  <div class="card"><div class="l">Saytda qabul qilindi</div><div class="n" style="color:var(--green)">{{ stats.by_action.get('accepted', 0) }}</div></div>
+  <div class="card"><div class="l">Saytda qaytarildi</div><div class="n" style="color:var(--red)">{{ stats.by_action.get('rejected', 0) }}</div></div>
+  <div class="card"><div class="l">Xatoliklar</div><div class="n">{{ stats.by_action.get('failed', 0) }}</div></div>
+</div>
+
+<div class="grid2">
+<section>
+  <form class="filters" method="get">
+    <select name="decision">
+      <option value="">Barcha qarorlar</option>
+      {% for k, v in DECISION_LABELS.items() %}
+      <option value="{{ k }}" {{ 'selected' if decision == k }}>{{ v }}</option>
+      {% endfor %}
+    </select>
+    <input name="q" value="{{ q }}" placeholder="STIR yoki tashkilot nomi">
+    <button>Filtrlash</button>
+  </form>
+  <table>
+    <tr><th>Tashkilot</th><th>STIR</th><th>Yuborilgan</th><th>Robot xulosasi</th><th>Saytda nima qilindi</th><th>Yangilangan</th></tr>
+    {% for r in rows %}
+    <tr>
+      <td><a href="/report/{{ r.id }}">{{ r.org_name or '—' }}</a><div class="muted">{{ r.opf }}</div></td>
+      <td>{{ r.inn }}</td>
+      <td>{{ r.submitted_at }}</td>
+      <td>{% if r.decision %}<span class="badge {{ r.decision }}">{{ DECISION_LABELS.get(r.decision, r.decision) }}</span>{% endif %}</td>
+      <td>{{ ACTION_LABELS.get(r.action, r.action or '—') }}{% if r.error %}<div class="ERROR">{{ r.error[:80] }}</div>{% endif %}</td>
+      <td class="muted">{{ r.updated_at }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="6" class="muted">Hali hisobot yo'q. Robotni ishga tushiring: <code>python main.py run</code></td></tr>
+    {% endfor %}
+  </table>
+  <p class="muted">
+    {{ total }} ta, sahifa {{ page }}/{{ pages }}
+    {% if page > 1 %}<a href="?decision={{ decision }}&q={{ q }}&page={{ page - 1 }}">← oldingi</a>{% endif %}
+    {% if page < pages %}<a href="?decision={{ decision }}&q={{ q }}&page={{ page + 1 }}">keyingi →</a>{% endif %}
+  </p>
+</section>
+<section>
+  <table>
+    <tr><th colspan="2">Robot logi</th></tr>
+    {% for e in events %}
+    <tr><td class="muted" style="white-space:nowrap">{{ e.ts[11:] }}</td>
+        <td><span class="{{ e.level }}">{{ e.level }}</span> {{ e.message }}{% if e.report_key %}<div class="muted">{{ e.report_key }}</div>{% endif %}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+</div>
+{% endblock %}

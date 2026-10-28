@@ -1,0 +1,124 @@
+ Chop etish
+×
+Ko'rib chiqish va yuborish
+✓
+Hisobot muvaffaqiyatli yuborildi
+27.10.2026 17:05
+O'ZBEKISTON RESPUBLIKASI
+Milliy statistika qo'mitasi
+YILLIK IQTISODIY KUZATUV SAVOLNOMASI
+2025 yil yakunlari bo'yicha
+STIR
+305832646
+TO'LDIRILGAN SANA
+27.10.2026
+JAVOBLAR
+21 / 21 savol
+HOLATI
+Yuborilgan
+1
+Korxonaning tavsifi va iqtisodiy faoliyat turlari
+✓
+1.1
+2025-yil uchun asosiy faoliyat turi kodi to‘g‘ri ko‘rsatilganmi?
+01491
+Ipak qurtini koʻpaytirish
+1.1a
+Amalda shug‘ullanayotgan asosiy faoliyatingizni ta'riflang.
+ипак курти купайтириш
+1.2
+2025 yilda korxonada asosiy faoliyatdan tashqari boshqa bir yoki bir nechta faoliyat turlari mavjudmi?
+Yo'q
+1.4
+2025 yilda operatsion tushum/daromadlarning necha foizi (%) elektron tijoratdan (internet savdodan) olingan? Veb-sayt, mobil ilova, onlayn marketpleys yoki ijtimoiy tarmoq orqali buyurtma qilingan sotuvlarni kiriting, masalan Uzum Market, korxona veb-sayti, Telegram yoki Instagram orqali.
+0
+%
+avtomatik
+1.5
+2025 yilda operatsion tushum/daromadlarning necha foizi (%) turizmdan (turistlarga to'g'ridan-to'g'ri sotuvlardan) olingan? Mahalliy yoki xorijiy turistlarga bevosita sotilgan tovarlar yoki xizmatlarni kiriting, masalan Samarqand, Buxoro, Xiva va boshqa turistik hududlarda mehmonxona xizmatlari, tur xizmatlari, transport, ovqatlanish yoki suvenirlar.
+0
+%
+avtomatik
+1.6
+2025 yilda operatsion tushum/daromadlarning necha foizi (%) raqamli iqtisodiyot (AKT bilan bog‘liq xizmatlar)dan olingan? Dasturiy ta’minot ishlab chiqish, AT xizmatlari, telekommunikatsiya, raqamli platformalar, onlayn kontent va raqamli tarzda ko‘rsatiladigan boshqa xizmatlardan tushgan daromadlarni kiriting, masalan mobil ilovalar, veb-sayt yaratish yoki bulutli xizmatlar.
+0
+%
+avtomatik
+1.7
+2025 yilda o‘z ehtiyojlaringiz uchun elektr energiyasi ishlab chiqarganmisiz? Ishlab chiqargan bo‘lsangiz qaysi manbalar orqali?
+Yo'q
+1.9
+Korxona o'z ehtiyoji uchun (ishlab chiqarishda) suv ishlab chiqarganmi? Bir nechta javoblar tanlanishi mumkin.
+Yo'q
+1.11
+2025 yilda o'z ehtiyoji uchun ishlab chiqarilgan mahsulot (ish, xizmatlar) qiymati qancha (1.8 — elektr energiyasi va 1.10 — suvdan tashqari)?
+0
+mln so'm
+2
+Xarajatlar va investitsiyalar
+✓
+2.1
+2025 yildagi jami xarajatlaringiz qiymatini kiriting.
+0
+mln so'm
+2.3
+2025 yilda kiritilgan investitsiyalarning jami qiymati qancha bo'lgan? (asosiy kapitalga va ishlab chiqarilmagan nomoliyaviy aktivlarga kiritilgan investitsiyalar)
+0
+mln so'm
+3
+Daromadlar
+✓
+3.1
+2025-yildagi jami aylanmangizni kiriting (qishloq xo'jaligi, qurilish, sanoat, savdo va xizmat ko'rsatish faoliyatlaridan jami).
+0
+mln so'm
+3.2
+2025 yil uchun olingan boshqa daromad turlarini tanlang va ularning qiymatini kiriting. Bir nechta javoblar tanlanishi mumkin.
+Mavjud emas
+4
+Zaxiralar
+✓
+4.1
+Ishlab chiqarish xomashyosi va materiallar zaxiralari qiymati
+0
+2025 yil boshiga
+0
+2025 yil oxiriga
+4.2
+Qayta sotish uchun sotib olingan tovarlar zaxiralari qiymati
+0
+2025 yil boshiga
+0
+2025 yil oxiriga
+4.3
+Tugallanmagan ishlab chiqarish qiymati (yarimtayyor mahsulotlar, tugallanmagan qurilish ishlari va boshqalar)
+0
+2025 yil boshiga
+0
+2025 yil oxiriga
+4.4
+Tayyor mahsulot qoldig'i qiymati (qishloq xo'jaligi va qurilish sohasidagi tayyor mahsulotlarni ham qo'shgan holda)
+0
+2025 yil boshiga
+0
+2025 yil oxiriga
+5
+Asosiy vositalar, transport va omborlar
+✓
+5.1
+Subyektda qanday turdagi asosiy vositalar yoki ishlab chiqarish obyektlari (kredit yoki lizingga olinganini qo‘shgan holda) mavjud? Bir nechta javoblar tanlanishi mumkin.
+Mavjud emas
+5.2
+Subyekt qanday turdagi transport xizmatlaridan muntazam foydalanadi? Bir nechta javoblar tanlanishi mumkin.
+Foydalanilmaydi
+5.4
+Subyekt omborxonadan foydalanadimi?
+Yo'q, foydalanilmaydi
+Telefon raqamini kiriting.
++998 90 000 00 00
+Yangi
+STIR (INN): 305832646
+
+Tekshirish uchun hisobotni avval o'zingizga oling.
+
+ Olish

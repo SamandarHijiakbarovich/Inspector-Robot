@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Ishga tushirishlar</h2>
+<table>
+  <tr><th>#</th><th>Boshlandi</th><th>Tugadi</th><th>Rejim</th><th>Ko'rildi</th><th>Qabul</th><th>Rad</th><th>Qo'lda</th><th>Xato</th><th>Izoh</th></tr>
+  {% for r in runs %}
+  <tr>
+    <td>{{ r.id }}</td><td>{{ r.started_at }}</td><td>{{ r.finished_at or 'ishlamoqda…' }}</td><td>{{ r.mode }}</td>
+    <td>{{ r.processed }}</td><td>{{ r.accepted }}</td><td>{{ r.rejected }}</td><td>{{ r.manual }}</td><td>{{ r.failed }}</td>
+    <td class="ERROR">{{ r.note or '' }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
